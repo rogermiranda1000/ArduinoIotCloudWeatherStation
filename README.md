@@ -11,4 +11,4 @@ This repo adapts the code of my other project [Weather Station - Domótica](http
 
 - Create a [new IoT thing](https://create.arduino.cc/iot/things). During the creation you'll have to configure (if you haven't done it before) the board, where you'll get the `SECRET_DEVICE_KEY`.
 - Add 3 `floats`: `humidity`, `pressure` and `rain`. Also add a `CloudTemperatureSensor` `temperature` and a `CloudVelocity` `wind_speed`. All the properties should be `READ_ONLY`.
-- Create a `arduino_secrets.h` file that contains the WiFi to be used (`SECRET_SSID`) and its password (`SECRET_SSID_PASS`), the secret IoT key (`SECRET_DEVICE_KEY`), and the device ID (`SECRET_DEVICE_LOGIN_NAME`, found on the IoT thing, on the `ID` section below your board name).
+- Create a `include/arduino_secrets.h` file that contains the WiFi to be used (`SECRET_SSID`) and its password (`SECRET_SSID_PASS`), the secret IoT key (`SECRET_DEVICE_KEY`), and the device ID (`SECRET_DEVICE_LOGIN_NAME`, found on the IoT thing, on the `ID` section below your board name).
