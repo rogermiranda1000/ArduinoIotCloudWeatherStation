@@ -21,7 +21,7 @@ void initProperties(){
   ArduinoCloud.addProperty(humidity, READ, ON_CHANGE, NULL, 5);
   ArduinoCloud.addProperty(pressure, READ, ON_CHANGE, NULL, 1);
   ArduinoCloud.addProperty(rain, READ, ON_CHANGE, NULL);
-  ArduinoCloud.addProperty(temperature, READ, ON_CHANGE, NULL);
+  ArduinoCloud.addProperty(temperature, READ, ON_CHANGE, NULL, 0.2f);
   ArduinoCloud.addProperty(wind_speed, READ, ON_CHANGE, NULL, 1);
 
 }
