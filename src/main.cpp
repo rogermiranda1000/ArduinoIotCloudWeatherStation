@@ -13,6 +13,9 @@ void setup() {
   Serial.begin(SERIAL_SPEED);
   delay(1500);
 
+  Debug.setDebugLevel(DBG_VERBOSE);
+  Debug.setDebugOutputStream(&Serial);
+
   // Defined in thingProperties.h
   initProperties();
 
@@ -43,9 +46,10 @@ void loop() {
   if (current - acum < delay_ms) return;
   acum = current;
 
-  humidity = weather.readHumidity();
-  if (humidity == ERROR_I2C_TIMEOUT) Serial.println("I2C error."); // humidty sensor failed to respond
+  float hum = weather.readHumidity();
+  if (hum == ERROR_I2C_TIMEOUT) Serial.println("I2C error."); // humidty sensor failed to respond
   else {
+    humidity = hum;
     pressure = weather.readPressure();
     temperature = weather.readTemperature();
   }
